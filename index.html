@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Pomodoro Timer</h1>
+  <div class="ring-container">
+    <svg id="progress-ring" viewBox="0 0 300 300">
+      <circle r="140" cx="150" cy="150" stroke="#ddd" stroke-width="15" fill="none" />
+      <circle id="ring-progress" r="140" cx="150" cy="150" stroke-width="15" fill="none"
+        stroke-dasharray="879.64" stroke-dashoffset="0" transform="rotate(-90 150 150)" />
+    </svg>
+    <div id="timer">00:00</div>
+    <div class="flip-clock">00:00</div>
+<div class="fullscreen-controls">
+  <button onclick="startTimer()">Start</button>
+  <button onclick="pauseTimer()">Pause</button>
+  <button onclick="resetTimer()">Reset</button>
+  <button onclick="toggleFullscreen()">Exit Fullscreen</button>
+</div>
+
+  </div>
+  <div id="statusText">Choose a session</div>
+
+  <div>
+   
+
+    <div class="input-pair">
+  <label for="focusInput">Focus (min):</label>
+  <input type="number" id="focusInput" value="25" min="1" />
+</div>
+
+<div class="input-pair">
+  <label for="breakInput">Break (min):</label>
+  <input type="number" id="breakInput" value="5" min="1" />
+</div>
+
+<button onclick="applyCustomTime()">Set Time</button>
+
+  </div>
+
+  <button class="btnss1" onclick="startSession(25)">Start 25 Min</button>
+  <button class="btnss2" onclick="startSession(45)">Start 45 Min</button>
+  <button class="btnss3" onclick="startBreak()">Manual Break</button>
+
+  <div class="buttonset">
+    <button class="btn1"  onclick="startTimer()">Start</button>
+    <button class="btn2" onclick="pauseTimer()">Pause</button>
+    <button class="btn3" onclick="resetTimer()">Reset</button>
+    <button class="btn4" onclick="toggleFullscreen()">Fullscreen</button>
+  </div>
+
+  <label>Theme:
+    <select id="themeSelect" size="" >
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      
+      <option value="green">Green</option>
+      
+      <option value="image">Space</option>
+      <option value="image1">PinkCity</option>
+       <option value="image2">Planets</option>
+       
+          
+      
+    </select>
+  </label>
+
+  <div id="resetSection" class="reset-container">
+    
+    <button id="clearStorageBtn">Clear All Setting</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

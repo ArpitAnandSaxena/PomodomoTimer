@@ -1,0 +1,250 @@
+:root {
+      --bg-color: #f7f7f7;
+      --text-color: #000;
+      --ring-color: #5558ff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      background-size: cover;
+      background-position: center;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 6vw;
+    }
+
+    .ring-container {
+      position: relative;
+      width: 80vw;
+      max-width: 300px;
+      height: 80vw;
+      max-height: 300px;
+      margin: 20px auto;
+      background: transparent;
+    }
+
+    .ring-container:fullscreen {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .ring-container:fullscreen svg {
+      display: none;
+    }
+
+    .ring-container:fullscreen .flip-clock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      font-size: 26vw;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .flip-clock {
+      display: none;
+    }
+
+    #progress-ring {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+
+    #ring-progress {
+      stroke: var(--ring-color);
+    }
+
+    #timer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 80px;
+      font-weight: bold;
+    }
+
+    #statusText {
+      font-size: 5vw;
+      margin-bottom: 15px;
+    }
+
+    button, input, select {
+      padding: 10px;
+      margin: 5px;
+      font-size: 20px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: all ease-in 0.2s;
+    }
+
+    input[type="number"] {
+      width: 60px;
+      text-align: center;
+    }
+
+    .reset-container {
+      margin-top: 10px;
+      padding: 10px;
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+      background-color: #171616;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .reset-container h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #2dc3f5;
+    }
+
+    #clearStorageBtn {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #clearStorageBtn:hover {
+      background-color: #cc0000;
+    }
+
+    .buttonset {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .buttonset button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 10px;
+      transition: all ease-in 0.2s;
+    }
+    .btn1:hover{
+      background-color: rgb(8, 154, 226);
+      
+    }
+    .btn2:hover{
+      background-color: rgb(8, 154, 226);
+    }
+      .btn3:hover{
+      background-color: rgb(8, 154, 226);
+      
+    }
+    .btn4:hover{
+      background-color: rgb(8, 154, 226);
+      
+    }
+    .btnss1:hover{
+      background-color: rgb(4, 69, 4);
+      color: #f7f7f7;
+    }
+    .btnss2:hover{
+      background-color: rgb(4, 69, 4);
+      color: #f7f7f7;
+    }.btnss3:hover{
+      background-color: rgb(4, 69, 4);
+      color: #f7f7f7;
+    }
+
+
+    @media (max-width: 400px) {
+      #timer {
+        font-size: 10vw;
+      }
+
+      #statusText {
+        font-size: 6vw;
+      }
+    }
+
+    .fullscreen-controls {
+  display: none;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fullscreen-controls button {
+  padding: 10px 20px;
+  font-size: 5vw;
+  border-radius: 12px;
+  border: none;
+  background-color: #2dc3f5;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.fullscreen-controls button:hover {
+  background-color: #148ab4;
+}
+
+@media (min-width: 500px) {
+  .fullscreen-controls button {
+    font-size: 2vw;
+  }
+   
+}
+.input-pair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.input-pair label {
+  font-size: 4vw;
+  min-width: fit-content;
+}
+
+.input-pair input {
+  font-size: 4vw;
+  padding: 6px 10px;
+  width: 60px;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  .input-pair label,
+  .input-pair input {
+    font-size: 1rem;
+  }
+}
